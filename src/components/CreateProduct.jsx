@@ -13,7 +13,7 @@ export function CreateProduct() {
 
     const store = async (e) => {
         e.preventDefault()
-        let { data } = await axios.post(`${endpoint}`, {
+        let { data } = await axios.get(`${endpoint}`, {
             description: description,
             price: price,
             stock: stock,
