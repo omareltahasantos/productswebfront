@@ -5,7 +5,7 @@ import axios from 'axios'
 
 export function CreateProduct() {
     const navigate = useNavigate()
-    const endpoint = 'https://productsweb1front.herokuapp.com/api/product/'
+    const endpoint = 'https://productsweb1.herokuapp.com/api/product/'
 
     const [description, setDescription] = useState('')
     const [price, setPrice] = useState(null)
