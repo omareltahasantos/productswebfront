@@ -67,11 +67,11 @@ export function ShowProducts() {
                             </TableRow>
                         </TableHead>
                         <TableBody>
-                            {products.map((product) => (
+                            {products.length !== 0 ? products.map((product) => (
                                 <TableRow hover key={product.id}>
                                     <ProductItem deleteProduct={deleteProduct} {...product} />
                                 </TableRow>
-                            ))}
+                            )) : ''}
                         </TableBody>
                     </Table>
                 </TableContainer>
