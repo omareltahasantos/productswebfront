@@ -5,7 +5,7 @@ import axios from 'axios'
 
 export function CreateProduct() {
     const navigate = useNavigate()
-    const endpoint = 'https://productsweb1.herokuapp.com/api/product/'
+    const endpoint = 'https://productsweb1.herokuapp.com/api/product'
 
     const [description, setDescription] = useState('')
     const [price, setPrice] = useState(null)
@@ -13,11 +13,11 @@ export function CreateProduct() {
 
     const store = async (e) => {
         e.preventDefault()
-        let { data } = await axios.get(`${endpoint}`, {
+        let { data } = await axios.get(`${endpoint}`, {params: {
             description: description,
             price: price,
             stock: stock,
-        })
+        }})
 
         setDescription(data.description)
         setPrice(parseInt(data.price))
