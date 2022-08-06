@@ -6,7 +6,7 @@ import axios from 'axios'
 export function EditProduct() {
     const { id } = useParams()
     const navigate = useNavigate()
-    const endpoint = 'http://localhost:8000/api/product/'
+    const endpoint = 'https://productsweb1front.herokuapp.com/api/product/'
 
     const [description, setDescription] = useState('')
     const [price, setPrice] = useState(null)

@@ -20,7 +20,7 @@ import { ProductItem } from './ShowProducts/ProductItem'
 import { HeaderShowProductsTable } from './ShowProducts/HeaderShowProductsTable'
 
 export function ShowProducts() {
-    const ENDPOINT = 'http://localhost:8000/api'
+    const ENDPOINT = 'https://productsweb1front.herokuapp.com/api'
 
     const [products, setProducts] = useState([])
     const [count, setCount] = useState(null)
